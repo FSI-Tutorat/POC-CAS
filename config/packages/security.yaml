@@ -5,14 +5,37 @@ security:
         Symfony\Component\Security\Core\User\PasswordAuthenticatedUserInterface: 'auto'
     # https://symfony.com/doc/current/security.html#loading-the-user-the-user-provider
     providers:
-        users_in_memory: { memory: null }
+        uid_user_provider:
+            id: uid_user_provider
+
+        chain_provider:
+            chain:
+                providers: [in_memory, uid_user_provider]
+
+        in_memory:
+            memory:
+                users:
+                    __NO_USER__:
+                        password:
+                        roles: ROLE_ANON
     firewalls:
         dev:
             pattern: ^/(_(profiler|wdt)|css|images|js)/
             security: false
+
         main:
             lazy: true
-            provider: users_in_memory
+            pattern: ^/
+            security: true
+            provider: chain_provider
+            custom_authenticators:
+                - cas.security.authentication.authenticator
+
+        l3_firewall:
+            pattern: ^/
+            security: true
+            custom_authenticators:
+                - cas.security.authentication.authenticator
 
             # activate different ways to authenticate
             # https://symfony.com/doc/current/security.html#the-firewall

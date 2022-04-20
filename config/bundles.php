@@ -14,4 +14,5 @@ return [
     Symfony\Bundle\MakerBundle\MakerBundle::class => ['dev' => true],
     Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle::class => ['all' => true],
     L3\Bundle\CasGuardBundle\L3CasGuardBundle::class => ['all' => true],
+    L3\Bundle\UidUserBundle\L3UidUserBundle::class => ['all' => true],
 ];
