@@ -54,6 +54,6 @@ class DefaultController extends AbstractController
         dump($this->container->get('security.token_storage'));
         dump($this->getUser());
 
-        return $this->render('base.html.twig', []);
+        return $this->render('default/index.html.twig', []);
     }
 }
