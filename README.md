@@ -141,4 +141,4 @@ Allez sur l'un des liens suivant :
 Si après vous être connecté vous voyez la page de bases des nouvelles applications de Symfony, c'est tout bon!
 
 - xxxx.univ-tlse3.fr
-Si une fois connecté vous arrivez sur une page vous disant "Hello! ✅", vous avez réussi!
+Si une fois connecté vous arrivez sur une page vous disant "Hello, [voter id cas]! ✅", vous avez réussi!
