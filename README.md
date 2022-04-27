@@ -47,35 +47,6 @@ Si vous voulez partir d'un projet neuf vous pouvez en créer un avec la commande
 - Composer : un outil de gestion de dépendances pour PHP.
 - Symfony cli : pour la commande Symfony en ligne de commande
 
-## Mise en place du site web (environnement de développement)
-
-Cette procédure est...longue (10 minutes ?)...les dépendances vont être récupérées depuis les dépôts.
-
-1) Installer les dépendances vers des librairies tierces :  
-
-```
-
-composer install
-
-  
-
-> Loading composer repositories with package information
-
-> Restricting packages listed in "symfony/symfony" to "6.0.*"
-
-> ... fais des trucs ...
-
-> Executing script cache:clear [OK]
-
-> Executing script assets:install public [OK]
-
-```
-
-Seulement nécessaire lors de la mise en place de l'environnement de développement.
-
-(Sauf si de nouveaux packages sont rajouter au fur et a mesure du développement)
-
-
 ## Installation et manipulations importantes
 ### Modification du fichier : hosts
 La modification de ce fichier permet à l'ordinateur de rediriger lui-même un DNS vers une adresse IP sans utiliser de (serveur?) proxy.
